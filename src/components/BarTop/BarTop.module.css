@@ -1,0 +1,81 @@
+.BarTop {
+    background-color: black;
+    height: 6em;
+    padding: 0em 7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: inter;
+}
+
+.logo {
+    width: 4em;
+    height: auto;
+}
+
+
+.logoLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.logoLink a {
+    text-decoration: none;
+}
+
+.logoLink p {
+    color: rgb(198, 198, 198);
+    transition: 0.5s;
+}
+
+.logoLink p:hover {
+    color: rgb(255, 255, 255);
+}
+
+.login {
+    width: 1em;
+    height: auto;
+    filter: invert(100%);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.login:hover {
+    width: 1em;
+    height: auto;
+    filter: invert(100%);
+    scale: 1.2;
+}
+
+.inputLogin {
+    width: 65em;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2em;
+}
+
+.inputLogin input {
+    background-color: rgb(34, 34, 34);
+    border: none;
+    width: 16em;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: 0.5s;
+}
+
+.inputLogin a {
+    text-decoration: none;
+}
+
+.inputLogin p {
+    color: rgb(198, 198, 198);
+    transition: 0.5s;
+    font-size: 12px;
+}
+
+.inputLogin p:hover {
+    color: rgb(255, 255, 255);
+}
