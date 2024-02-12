@@ -15,11 +15,11 @@ const BarTop = () => {
   const [width, setWidth] = useState(200);
 
   const handleFocus = () => {
-    setWidth(500);
+    setWidth(220);
   };
 
   const handleBlur = () => {
-    setWidth(250);
+    setWidth(170);
   };
 
   return (
