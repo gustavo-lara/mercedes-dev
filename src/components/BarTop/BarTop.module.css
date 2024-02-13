@@ -81,6 +81,11 @@
     color: rgb(255, 255, 255);
 }
 
+.divMobile {
+    width: 10px;
+    height: 10px;
+}
+
 
 @media (max-width: 1200px) {
     .logoLink a {
@@ -96,11 +101,23 @@
 }
 
 @media (max-width: 600px) {
+    .BarTop{
+        padding: 0em 2em;
+    }
+
+    .logo {
+        width: 3.5em;
+    }
+
     .BarTop {
-        gap: 2em;
+        gap: 6em;
+    }
+
+    .inputLogin {
+        width: 15px;
     }
 
     .inputLogin input {
-        width: 100px;
+        display: none;
     }
 }

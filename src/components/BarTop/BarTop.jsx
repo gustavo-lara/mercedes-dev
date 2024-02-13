@@ -24,6 +24,7 @@ const BarTop = () => {
 
   return (
     <div className={styles.BarTop}>
+      <div className={styles.divMobile}></div>
       <div className={styles.logoLink}>
         <img className={styles.logo} src={logo} alt="Logo da Mercedes" />
         <Link to={"/"}><p>Mercedes-Benz</p></Link>
