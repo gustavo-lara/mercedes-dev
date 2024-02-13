@@ -34,22 +34,10 @@
 
 @media (max-width: 1200px) {
     .links {
-        justify-content: space-around;
         width: 100%;
     }
 
     .bloco {
         display: none;
-    }
-}
-
-@media (max-width: 500px) {
-    .links {
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .links p {
-        font-size: 10px;
     }
 }
