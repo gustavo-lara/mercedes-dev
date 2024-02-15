@@ -19,7 +19,7 @@ const BarTop = () => {
   };
 
   const handleBlur = () => {
-    setWidth(170);
+    setWidth(205);
   };
 
   return (
