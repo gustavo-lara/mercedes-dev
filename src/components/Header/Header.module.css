@@ -7,7 +7,7 @@
 
 .links {
     height: 3em;
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -15,12 +15,14 @@
 
 .links a {
     text-decoration: none;
+
 }
 
 .links p {
     color: rgb(198, 198, 198);
     transition: 0.5s;
     font-size: 12px;
+
 }
 
 .links p:hover {
@@ -32,10 +34,63 @@
     height: 3em;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
+    .Header {
+        justify-content: center;
+
+    }
+
     .links {
-        width: 100%;
-        padding:0em 1em;
+        gap: 1em;
+    }
+
+    .bloco {
+        display: none;
+    }
+}.Header {
+    border-top: 0.2px solid rgb(45, 45, 45);
+    background-color: black;
+    font-family: inter;
+    display: flex;
+}
+
+.links {
+    height: 3em;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+
+}
+
+.links p {
+    color: rgb(198, 198, 198);
+    transition: 0.5s;
+    font-size: 12px;
+
+}
+
+.links p:hover {
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px rgb(73, 77, 75), 0 0 82px rgb(73, 77, 75), 0 0 92px rgb(73, 77, 75), 0 0 102px rgb(73, 77, 75), 0 0 151px rgb(73, 77, 75);
+}
+
+.bloco {
+    width: 50%;
+    height: 3em;
+}
+
+@media (max-width: 1000px) {
+    .Header {
+        justify-content: center;
+
+    }
+
+    .links {
+        gap: 1em;
     }
 
     .bloco {
