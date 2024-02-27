@@ -8,8 +8,8 @@ export const Home = () => {
       <div className={styles.imgInicio}>
         <img src={imgInicio} alt="Imagem de uma Mercedes" />
         <div className={styles.cont}>
-        <p>A potência que pulsa</p>
-        <button>Saiba Mais</button>
+          <p>A potência que pulsa</p>
+          <button className={styles.btn}>Saiba Mais</button>
         </div>
       </div>
     </div>

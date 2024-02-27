@@ -56,9 +56,9 @@
 }
 
 .gustavoLara a:hover {
-    color: rgb(108, 255, 135);
-    border-bottom: 0.2px solid rgb(108, 255, 135);
-    text-shadow: 0 0 7px rgb(108, 255, 135), 0 0 10px rgb(108, 255, 135), 0 0 21px rgb(108, 255, 135), 0 0 42px rgb(108, 255, 135), 0 0 82px rgb(108, 255, 135), 0 0 92px rgb(108, 255, 135), 0 0 102px rgb(108, 255, 135), 0 0 151px rgb(108, 255, 135);
+    color: rgb(105, 105, 105);
+    border-bottom: 0.2px solid rgb(116, 116, 116);
+    text-shadow: 0 0 7px #727272, 0 0 10px #535353, 0 0 21px #5d5d5d, 0 0 92px rgb(73, 77, 75), 0 0 102px rgb(73, 77, 75), 0 0 151px rgb(73, 77, 75);
 }
 
 @media (max-width: 1000px) {
