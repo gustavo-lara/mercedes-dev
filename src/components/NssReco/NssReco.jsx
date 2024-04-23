@@ -6,7 +6,7 @@ const NssReco = () => {
     return (
         <div className={styles.body}>
             <div className={styles.title}>
-                <h2>Nossas Recomendações</h2>
+                <h2>Recomendações</h2>
             </div>
             <div className={styles.cards}>
                 <CardNssReco />
