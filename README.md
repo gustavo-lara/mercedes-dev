@@ -1,3 +1,4 @@
-# Base de Projetos
+#Mercedes.Dev
 
-Repositório com o propósito de servir para base de projetos.
+Mini projeto com o objetivo de ampliar meu portifólio.
+O projeto é baseado no site da Mercedes do Brasil. 
