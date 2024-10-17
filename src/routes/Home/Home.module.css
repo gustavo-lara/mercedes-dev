@@ -10,12 +10,15 @@
     justify-content: center;
 }
 
-.imgInicio img {
+.telaInicio video {
+    max-width: 100vh;
+}
+
+video,
+source {
     width: 100%;
-    height: 40em;
     object-fit: cover;
-    z-index: 2;
-    filter: brightness(0.5);
+    height: 40em;
 }
 
 @media (max-width: 600px) {
