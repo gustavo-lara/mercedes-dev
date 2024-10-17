@@ -1,47 +1,64 @@
-import { Link } from "react-router-dom"
-import styles from "./Header.module.css"
+import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
 
 const navigation = [
-  { component: "/", name: "Home" },
-  { component: "/nossosmodelos", name: "NossosModelos" },
-  { component: "/showroomonline", name: "ShowroomOn" },
-  { component: "/guiadecompra", name: "GuiaDeCompra" },
-  { component: "/pecasservicos", name: "PecasServicos" },
-  { component: "/nossamarca", name: "NossaMarca" }
-]
+  { component: "/", name: "Página Inicial" },
+  { component: "/nossosmodelos", name: "Nossos Modelos" },
+  { component: "/showroomonline", name: "Showroom Online" },
+  { component: "/guiadecompra", name: "Guia de Compra" },
+  { component: "/pecasservicos", name: "Peças e Serviços" },
+  { component: "/nossamarca", name: "Nossa Marca" }
+];
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const navbarRef = useRef(null);
+
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+    if (navbarRef.current) {
+      navbarRef.current.classList.toggle('show', !isOpen);
+    }
+  };
+
+  const closeNavbar = () => {
+    setIsOpen(false);
+    if (navbarRef.current) {
+      navbarRef.current.classList.remove('show');
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black">
       <div className="container-fluid">
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleNavbar} // Chama a função de alternar
+          aria-controls="navbarNav"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse mt-2 mb-2" id="navbarNav">
+        <div className={`collapse navbar-collapse mt-2 mb-2 ${isOpen ? 'show' : ''}`} id="navbarNav" ref={navbarRef}>
           <ul className="navbar-nav gap-1" style={{ fontSize: '13px' }}>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/"}>Página Inicial</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/nossosmodelos"}>Nossos Modelos</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/showroomonline"}>Showroom Online</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/guiadecompra"}>Guia de Compra</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/pecasservicos"}>Peças e Serviços</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/nossamarca"}>Nossa Marca</Link>
-            </li>
+            {navigation.map((navItem, index) => (
+              <li className="nav-item" key={index}>
+                <Link
+                  className="nav-link"
+                  to={navItem.component}
+                  onClick={closeNavbar} // Fecha a navbar ao clicar em um link
+                >
+                  {navItem.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Header
+export default Header;
