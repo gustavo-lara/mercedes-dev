@@ -12,17 +12,35 @@ const navigation = [
 
 const Header = () => {
   return (
-    <div className={styles.Header}>
-      <div className={styles.links}>
-        <Link to={"/"}><p>Página Inicial</p></Link>
-        <Link to={"/nossosmodelos"}><p>Nossos Modelos</p></Link>
-        <Link to={"/showroomonline"}><p>Showroom Online</p></Link>
-        <Link to={"/guiadecompra"}><p>Guia de Compra</p></Link>
-        <Link to={"/pecasservicos"}><p>Peças e Servicos</p></Link>
-        <Link to={"/nossamarca"}><p>Nossa Marca</p></Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-black">
+      <div className="container-fluid">
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse mt-2 mb-2" id="navbarNav">
+          <ul className="navbar-nav gap-1" style={{ fontSize: '13px' }}>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/"}>Página Inicial</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/nossosmodelos"}>Nossos Modelos</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/showroomonline"}>Showroom Online</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/guiadecompra"}>Guia de Compra</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/pecasservicos"}>Peças e Serviços</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/nossamarca"}>Nossa Marca</Link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className={styles.bloco}></div>
-    </div>
+    </nav>
   )
 }
 
