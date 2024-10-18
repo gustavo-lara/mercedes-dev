@@ -76,4 +76,8 @@
         width: 310px;
         height: 640px;
     }
+
+    .Cont h2 {
+        font-size: 23px;
+    }
 }
